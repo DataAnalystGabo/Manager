@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrate</title>
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/public/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script type="module" src="/public/js/register/setInputDate.js"></script>
+    <script type="module" src="/public/js/register/register.js"></script>
+</head>
+
+<body class="body">
+    <main class="main">
+
+        <div class="wrapper">
+            <form action="" class="form" id="form">
+                <div class="form__header">
+                    <i class="fa-solid fa-ghost form__logo"></i>
+                    <h1 class="form__title">Registrarme</h1>
+                    <span class="form__link">
+                        <a class="form__a" href="login.html">¿Ya estás registrado? Ingresá aquí</a>
+                    </span>
+                </div>
+
+                <div class="form__firstname">
+                    <input class="form__input" type="text" name="firstName" placeholder="" id="firstName">
+                    <div class="form__label" id="firstNameLabel">Nombre</div>
+                </div>
+
+                <div class="form__lastname">
+                    <input class="form__input" type="text" name="lastName" placeholder="" id="lastName">
+                    <div class="form__label" id="lastNameLabel">Apellido</div>
+                </div>
+
+                <div class="form__birthdate">
+                    <input class="form__input form__input--birthdate" type="text" id="birthdate" name="birthdate" placeholder="" id="birthdate">
+                    <div class="form__label" id="birthdateLabel">Fecha de Nacimiento</div>
+                </div>
+
+                <div class="form__age">
+                    <input class="form__input form__input--age" type="text" id="age" placeholder="" disabled>
+                    <div class="form__label" id="ageLabel">Edad</div>
+                </div>
+
+                <div class="form__email">
+                    <input class="form__input" type="email" name="email" placeholder="" id="email">
+                    <div class="form__label" id="emailLabel">Email</div>
+                </div>
+
+                <div class="form__password">
+                    <input class="form__input" type="password" name="password" placeholder="" id="password">
+                    <div class="form__label" id="passwordLabel">Contraseña</div>
+                </div>
+
+                <div class="form__password">
+                    <input class="form__input" type="password" name="rePassword" placeholder="" id="rePassword">
+                    <div class="form__label" id="rePasswordLabel">Reingrese su contraseña</div>
+                </div>
+
+                <button class="form__button" type="submit">Registrarme</button>
+
+                <div class="form__alert" id="alertDiv">
+                    <span class="form__span" id="alertSpan">
+                    </span>
+                </div>
+            </form>
+        </div>
+
+    </main>
+</body>
+</html>

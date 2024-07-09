@@ -157,15 +157,11 @@ input:not(:placeholder-shown) + .form__label{
     display: none;
     justify-content: start;
     align-items: center;
-    height: 3em;
     width: 100%;
     max-width: 30em;
-    background-color: var(--alert-ok);
-    border: 1px solid var(--alert-border-ok);
     border-radius: .25em;
 }
 
 .form__span{
-    color: var(--text-secondary);
-    padding-left: 1.5em;
+    padding: 1em 2em;
 }

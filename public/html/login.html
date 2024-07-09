@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script type="module" src="login.js"></script>
+    <script type="module" src="/public/js/login/login.js"></script>
 </head>
 
 <body class="body">
     <main class="main">
 
         <div class="wrapper">
-            <form action="" class="form" id="loginForm">
+            <form action="" class="form" id="form">
                 <div class="form__header">
                     <i class="fa-solid fa-ghost form__logo"></i>
                     <h1 class="form__title">Ingresar</h1>
                     <span class="form__link">
-                        <a class="form__a" href="/public/register.html">¿No estás registrado? Ingresá aquí</a>
+                        <a class="form__a" href="register.html">¿No estás registrado? Ingresá aquí</a>
                     </span>
                 </div>
 
@@ -35,8 +35,8 @@
 
                 <button class="form__button" type="submit">Ingresar</button>
 
-                <div class="form__alert" id="alertProcessing">
-                    <span class="form__span" id="spanProcessing">
+                <div class="form__alert" id="alertDiv">
+                    <span class="form__span" id="alertSpan">
                     </span>
                 </div>
             </form>
