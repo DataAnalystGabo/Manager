@@ -48,7 +48,7 @@ form.addEventListener('submit', function(e){
                 //Reset del form
                 form.reset();
                 inputs.forEach(input => {
-                    resetInputStyle(input.element, input.label);
+                resetInputStyle(input.element, input.label);
                 });
 
                 //Redirigiedo al usuario
@@ -61,7 +61,7 @@ form.addEventListener('submit', function(e){
                 showAlert(error, 'error');
             });
         }else{
-            //Alerta: Error de no coincidencias de contraseñas
+            //Alerta: Error las contraseñas no coinciden
             showAlert('¡Las contraseñas ingresadas no coinciden!', 'error');
         };  
     } else {

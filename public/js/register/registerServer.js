@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '../.env'});
 const express    = require('express');
 const bodyParser = require('body-parser');
 const cors       = require('cors');
@@ -11,8 +12,8 @@ const PORT       = process.env.PORT || 3000;
 app.use(cors({
     origin: 'http://127.0.0.1:5500'
 }));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 // Sirve los archivos estáticos desde la carpeta 'public'
@@ -21,11 +22,11 @@ app.use(express.static('public'));
 
 //Establecemos la conexión a la base de datos
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'manager',
-    password: '78235514',
-    port: 5432
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASS,
+    port: process.env.DB_PORT
 });
 
 

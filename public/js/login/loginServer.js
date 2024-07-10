@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '../.env'});
 const express    = require('express');
 const bodyParser = require('body-parser');
 const cors       = require('cors');
@@ -10,8 +11,8 @@ const PORT       = process.env.PORT || 3000;
 app.use(cors({
     origin: 'http://127.0.0.1:5500'
 }));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 
 // Sirve los archivos estáticos desde la carpeta 'public'
@@ -20,11 +21,11 @@ app.use(express.static('public'));
 
 //Establecemos la conexión a la base de datos
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'manager',
-    password: '78235514',
-    port: 5432
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASS,
+    port: process.env.DB_PORT
 });
 
 
@@ -61,15 +62,16 @@ app.post('/login', async (req, res) => {
             if (match) {
                 return res.status(201).send('¡Login Exitoso!');
             } else {
-                return res.status(409).send('el email o la contraseña son incorrectas #match');
+                return res.status(401).send('el email o la contraseña son incorrectas.');
             }
 
         } else {
-            return res.status(409).send('el email o la contraseña son incorrectas #query');
+            return res.status(409).send('el email o la contraseña son incorrectas.');
         }
         
     } catch (error) {
-        console.log(error);
+        console.error('Error en el servidor', error);
+        res.status(500).send('Error interno del servidor');
     }
 });
 
