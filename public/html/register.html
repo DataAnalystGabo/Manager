@@ -15,7 +15,7 @@
     <main class="main">
 
         <div class="wrapper">
-            <form action="" class="form" id="form">
+            <form class="form" id="form">
                 <div class="form__header">
                     <i class="fa-solid fa-ghost form__logo"></i>
                     <h1 class="form__title">Registrarme</h1>
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="form__birthdate">
-                    <input class="form__input form__input--birthdate" type="text" id="birthdate" name="birthdate" placeholder="" id="birthdate">
+                    <input class="form__input form__input--birthdate" type="text" name="birthdate" placeholder="" id="birthdate">
                     <div class="form__label" id="birthdateLabel">Fecha de Nacimiento</div>
                 </div>
 
@@ -52,12 +52,16 @@
                 <div class="form__password">
                     <input class="form__input" type="password" name="password" placeholder="" id="password">
                     <div class="form__label" id="passwordLabel">Contraseña</div>
-                </div>
+                </div>               
 
-                <div class="form__password">
+                <div class="form__password form__passsword-re">
                     <input class="form__input" type="password" name="rePassword" placeholder="" id="rePassword">
                     <div class="form__label" id="rePasswordLabel">Reingrese su contraseña</div>
                 </div>
+
+                <div class="form__info">
+                    <p class="form__p">La contraseña debe contener al menos 8 caracteres de longitud, una letra mayúscula, una minúscula y un número.</p>
+                </div> 
 
                 <button class="form__button" type="submit">Registrarme</button>
 

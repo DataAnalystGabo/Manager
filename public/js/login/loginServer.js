@@ -50,9 +50,6 @@ app.post('/login', async (req, res) => {
     try {
         const userCheck = await pool.query('SELECT password_hash FROM Users WHERE email = $1', [email]);
 
-        //DEBUG---
-        console.log(userCheck)
-
         if (userCheck.rows.length > 0) {
 
             const user          = userCheck.rows[0];

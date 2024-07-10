@@ -16,7 +16,6 @@
     font-family: "Roboto", sans-serif;
     font-style: normal;
     color: var(--text-primary);
-    border: 1px solid blue;
 }
 
 .main{
@@ -26,7 +25,6 @@
     align-items: center;
     justify-content: center;
     background: var(--background);
-    border: 1px solid orange;
 }
 
 .wrapper{
@@ -80,6 +78,14 @@
     }
 }
 
+.form__link{
+    width: 80vw;
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .form__a{
     text-decoration: none;
     color: var(--button);
@@ -96,11 +102,15 @@
 .form__lastname,
 .form__birthdate,
 .form__age{
-    width: 100%;
+    width: 80vw;
     max-width: 30em;
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
+}
+
+.form__passsword-re{
+    margin-bottom: 0;
 }
 
 .form__input{
@@ -164,7 +174,7 @@ input:not(:placeholder-shown) + .form__label{
 }
 
 .form__button{
-    width: 100%;
+    width: 80vw;
     max-width: 30em;
     height: 3em;
     border-radius: 1.6em;
@@ -181,14 +191,25 @@ input:not(:placeholder-shown) + .form__label{
 }
 
 .form__alert{
+    width: 80vw;
+    max-width: 30em;
     display: none;
     justify-content: start;
     align-items: center;
-    width: 100%;
-    max-width: 30em;
     border-radius: .25em;
 }
 
 .form__span{
     padding: 1em 2em;
+}
+
+.form__info{
+    width: 80vw;
+    max-width: 30em;
+    padding: 0;
+    color: var(--text-secondary);
+}
+
+.form__p{
+    padding-left: 1em;
 }
