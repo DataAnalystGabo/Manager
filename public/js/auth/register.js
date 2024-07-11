@@ -1,6 +1,6 @@
-import { calculateAge } from './calculateAge.js';
-import { showAlert } from '../utils/showAlert.js';
-import { inputs, resetInputStyle, validateForm } from './validatorInputs.js';
+import { calculateAge } from '../helpers/calculateAge.js';
+import { showAlert } from '../helpers/showAlert.js';
+import { inputs, resetInputStyle, validateForm } from '../helpers/validatorInputs.js';
 
 const inputBirthdate  = document.getElementById('birthdate');
 const labelAge        = document.getElementById('ageLabel');
@@ -27,34 +27,29 @@ form.addEventListener('submit', function(e){
 
         if(password === rePassword){
             //Enviando datos al servidor
-            fetch('http://localhost:3000/register', {
+            fetch('http://localhost:3000/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({firstName, lastName, birthdate, age, email, password})
             })
-            .then(async response => {
-                if(!response.ok) {
-                    const text = await response.text();
-                    throw new Error(text);
-                }
-                return response.text();
-            })
+            .then(async response => response.json())
             .then(data => {
-                //Alerta: Registro exitoso
-                showAlert(data, 'success');
-
-                //Reset del form
-                form.reset();
-                inputs.forEach(input => {
-                resetInputStyle(input.element, input.label);
-                });
-
-                //Redirigiedo al usuario
-                setTimeout(() => {
-                    window.location.href = 'login.html';
-                }, 3000);
+                if (data.success) {
+                    showAlert(data.message, 'success');
+                    //Reset del form
+                    form.reset();
+                    inputs.forEach(input => {
+                    resetInputStyle(input.element, input.label);
+                    });
+                    //Redirigiedo al usuario
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 3000);
+                } else {
+                    showAlert(data.message, 'error');
+                }
             })
             .catch(error => {
                 //Alerta: Error de servidor
