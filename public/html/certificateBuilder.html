@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generador de Certificados</title>
+    <link rel="stylesheet" href="/public/css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/certificateBuilder.css">
+    <script type="module" src="/public/js/auth/certificateBuilder.js"></script>
+</head>
+
+<body class="body">
+  <div class="certificate-builder">
+    <div class="certificate-builder__form">
+      <div class="certificate-builder__header">
+        <h2 class="certificate-builder__title">Generador de Certificados</h2>
+      </div>
+
+      <div class="certificate-builder__gup-selection">
+        <div class="certificate-builder__gup-label">1. Seleccione GUP</div>
+
+        <div class="certificate-builder__gup-options">
+          <label class="gup-option gup-option--yellow" for="yellow">
+            <input class="gup-option__checkbox" type="checkbox" name="yellow" id="yellow">
+            <span class="gup-option__label">8° GUP</span>
+          </label>
+
+          <label class="gup-option gup-option--green" for="green">
+            <input class="gup-option__checkbox" type="checkbox" name="green" id="green">
+            <span class="gup-option__label">6° GUP</span>
+          </label>
+
+          <label class="gup-option gup-option--blue" for="blue">
+            <input class="gup-option__checkbox" type="checkbox" name="blue" id="blue">
+            <span class="gup-option__label">4° GUP</span>
+          </label>
+
+          <label class="gup-option gup-option--red" for="red">
+            <input class="gup-option__checkbox" type="checkbox" name="red" id="red">
+            <span class="gup-option__label">2° GUP</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="certificate-builder__name-section">
+        <div class="certificate-builder__name-wrapper">
+          <div class="certificate-builder__name-label">2. Nombre/s y Apellido/s</div>
+          <input class="certificate-builder__name-input" type="text" name="name" id="inputName">
+        </div>
+      </div>
+
+      <div class="certificate-builder__date-section">
+        <div class="certificate-builder__date-wrapper">
+          <div class="certificate-builder__date-label">4. Fecha del examen</div>
+          <input class="certificate-builder__date-input" type="date" name="date" id="date">
+        </div>
+      </div>
+
+      <div class="certificate-builder__signature-section">
+        <div class="certificate-builder__signature-wrapper">
+          <div class="certificate-builder__signature-label">5. Examinador</div>
+          <input class="certificate-builder__signature-input" type="text" name="examinersSignature" id="inputExaminersSignature">
+        </div>
+        
+        <div class="certificate-builder__signature-wrapper">
+          <div class="certificate-builder__signature-label">6. Instructor</div>
+          <input class="certificate-builder__signature-input" type="text" name="instructorSignature" id="inputInstructorSignature">
+        </div>
+      </div>
+
+      <div class="certificate-builder__generator">
+        <input class="certificate-builder__button" type="button" value="Generar PDF" id="buttonGenerator">
+      </div>
+    </div>
+
+    <div class="certificate-builder__certificate certificate">
+      <div class="certificate__canvas">
+        <img class="certificate__background" id="imgBackground" src="">
+
+        <img class="certificate__border" id="imgBorder" src="">
+
+        <div class="certificate__header">
+          <img class="certificate__logo-academy" src="/public/img/logo-academia.svg">
+          <h2 class="certificate__title">Certificado de Graduación</h2>
+          <p class="certificate__subtitle">ACADEMIA DE TAEKWON-DO JORGE RIOS</p>
+        </div>
+
+        <div class="certificate__body">
+          <span class="certificate__text">Se extiende constancia a</span>
+          <span class="certificate__name" id="spanName">Nombre y Apellido</span>
+          <span class="certificate__text">de haber alcanzado la categoría de </span>
+          <span class="certificate__text" id="textGup">8° gup - cinturón amarillo.</span>
+        </div>
+
+        <div class="certificate__signatures">
+          <div class="certificate__examinator">
+            <span class="certificate__examinator-name" id="spanNameExaminator">Nombre Examinador</span>
+            <span class="certificate__line"></span>
+            <span class="certificate__examinator-label">Examinador</span>
+          </div>
+
+          <div class="certificate__instructor">
+            <span class="certificate__instructor-name" id="spanNameInstructor">Nombre Instructor</span>
+            <span class="certificate__line"></span>
+            <span class="certificate__instructor-label">Instructor</span>
+          </div>
+        </div>
+
+        <div class="certificate__logos">
+          <img class="certificate__logo" src="/public/img/logo-fetra.svg">
+          <img class="certificate__logo" src="/public/img/logot-itf.svg">
+          <img class="certificate__logo" src="/public/img/logo-itf-2.svg">
+        </div>
+      </div>  
+    </div>
+  </div>
+</body>
+
+
+
+
+
+  
+</html>

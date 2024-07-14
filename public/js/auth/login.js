@@ -19,7 +19,7 @@ form.addEventListener('submit', function(e) {
         .then(async response => response.json())
         .then(data => {
             if(data.success) {
-                window.location.href = 'dashboard.html'; // Redirige al dashaboard
+                window.location.href = 'certificateBuilder.html'; // Redirige al dashaboard
             } else {
                 showAlert(data.message, 'error');
             }

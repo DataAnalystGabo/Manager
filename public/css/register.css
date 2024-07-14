@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-:root{
-    --text-primary: #212529;
-    --text-secondary : #6c757d;
-    --text-tertiary: #adb5bd;
-    --color-active: #9d4edd;
-    --button: #7b2cbf;
-    --background: #FFFF;
-    --alert-ok: #d4edda;
-    --alert-border-ok: #c3e6cb;
-}
+@import url('root.css');
 
 .body{
     height: max-content;
