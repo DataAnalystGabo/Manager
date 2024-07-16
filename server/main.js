@@ -24,7 +24,7 @@ connectDB();
 app.use('/api/auth', authRoutes);
 
 // Manejo de errores (más específico)
-app.use((err, req, res, next) => {
+app.use((err, res) => {
     console.error(err.stack);
     res.status(err.status || 500).json({
     message: err.message || 'Error interno del servidor',

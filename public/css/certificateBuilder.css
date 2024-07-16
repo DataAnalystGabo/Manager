@@ -171,24 +171,17 @@
 .certificate__canvas{
   width: 595px;
   height: 842px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: auto;
+  margin: 0;
+  padding: 0;
   background-color: #FFFF;
-}
-
-.certificate__background{
-  position: absolute;
-  left: 0;
-  object-fit: contain;
-  z-index: 1;
-}
-
-.certificate__border{
-  position: absolute;
-  z-index: 2;
 }
 
 .certificate__header{
@@ -196,7 +189,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 2;
 }
 
 .certificate__logo-academy{
@@ -207,7 +199,7 @@
 
 .certificate__title{
   font-size: 4em;
-  font-family: "Italianno", cursive;
+  font-family: "Italianno";
   font-weight: 400;
   font-style: normal;
   color: var(--text-primary);
@@ -230,7 +222,6 @@
   font-weight: 800;
   font-size: 1.5em;
   text-align: center;
-  z-index: 2;
   color: var(--text-secondary);
   gap: .5em;
   padding: 1.5em 0;
@@ -283,7 +274,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1em 0;
-  z-index: 2;
 }
 
 .certificate-builder__generator {

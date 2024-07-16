@@ -1,5 +1,6 @@
-const bcrypt   = require('bcrypt');
-const { pool } = require('../config/db');
+const { bcrypt }   = require('bcrypt');
+const { pool }     = require('../config/db');
+const { path }     = require('path');
 
 async function registerUser(req, res) {
   const { firstName, lastName, birthdate, age, email, password } = req.body;
