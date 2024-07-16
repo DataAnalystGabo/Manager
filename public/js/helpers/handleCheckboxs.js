@@ -1,8 +1,9 @@
 export function handleCheckboxs() {
-    const checkboxes        = document.querySelectorAll('.gup-option__checkbox');
-    const certificateCanvas = document.getElementById('certificateCanvas');
-    const imgBorder         = document.getElementById('imgBorder');
-    const textGup           = document.getElementById('textGup');
+    const checkboxes            = document.querySelectorAll('.gup-option__checkbox');
+    const certificateCanvas     = document.getElementById('certificateCanvas');
+    const certificateBackground = document.getElementById('certificateBackground');
+    const imgBorder             = document.getElementById('imgBorder');
+    const textGup               = document.getElementById('textGup');
     
     //Función que permite que sólo un checkbox pueda estar activo
     checkboxes.forEach(checkbox => {
@@ -14,6 +15,7 @@ export function handleCheckboxs() {
                     }
                 })
                 let color         = checkbox.name;
+                // certificateBackground.src = `/public/img/background-${color}.svg`;
                 // imgBorder.src     = `/public/img/border-${color}.svg`;
                 certificateCanvas.style.backgroundImage = `url("/public/img/background-${color}.svg")`;
                 if (color === 'yellow') {
@@ -30,6 +32,7 @@ export function handleCheckboxs() {
                 }
             } else {
                 certificateCanvas.style.backgroundImage = 'url("")';
+                //certificateBackground.src = '';
             }
         });
     });

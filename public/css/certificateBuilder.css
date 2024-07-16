@@ -168,10 +168,24 @@
   background-color: var(--text-primary);
 }
 
+
+/*
+
+La implementación de la marca de agua como background y el border que varían según
+el color o la graduación que se seleccione presenta la siguiente dificultad:
+
+-Si los svg se aplican con una etiqueta img y sus actuales estilos al exportar el archivo
+como PDF la marca de agua queda por encima de los demás elementos pero en alta resolución.
+
+-Si los svg se aplican como un estilo del tipo background-image al elemento div de clase -certificate__canvas-
+queda ordenado correctamente con una resolución correcta al 100% pero a medida que se aumenta el zoom se pixelea.
+
+*/
 .certificate__canvas{
   width: 595px;
   height: 842px;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -179,10 +193,16 @@
   background-repeat: no-repeat;
   background-position: left;
   background-size: auto;
+  image-rendering: pixelated;
   margin: 0;
   padding: 0;
   background-color: #FFFF;
 }
+
+/* .certificate__background {
+  position: absolute;
+  left: 0;
+} */
 
 .certificate__header{
   display: flex;
