@@ -58,7 +58,6 @@ form.addEventListener('submit', function(e){
             .catch(error => {
                 //Alerta: Error de servidor
                 showAlert(error, 'error');
-                console.log('esta aqui');
                 buttonSubmit('', 'error');
             });
         }else{
