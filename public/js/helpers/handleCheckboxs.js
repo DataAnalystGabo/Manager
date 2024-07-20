@@ -15,7 +15,7 @@ export function handleCheckboxs() {
                 let color         = checkbox.name;
                 // certificateBackground.src = `/public/img/background-${color}.svg`;
                 // imgBorder.src     = `/public/img/border-${color}.svg`;
-                certificateCanvas.style.backgroundImage = `url("/public/img/background-${color}.svg")`;
+                certificateCanvas.style.backgroundImage = `url("../img/background-${color}.svg")`;
                 if (color === 'yellow') {
                     textGup.textContent = '8° gup - cinturón amarillo.';
                 }
