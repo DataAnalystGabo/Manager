@@ -13,7 +13,7 @@ form.addEventListener('submit', function(e) {
         //Enviando datos al servidor
         fetch(window.location.hostname === '127.0.0.1'
             ? 'http://localhost:3000/api/auth/login'
-            : 'https://manager-8h85.onrender.com/api/auth/register', 
+            : 'https://manager-8h85.onrender.com/api/auth/login', 
             {
             method: 'POST',
             headers: {
