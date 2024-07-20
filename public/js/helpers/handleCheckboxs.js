@@ -1,8 +1,6 @@
 export function handleCheckboxs() {
     const checkboxes            = document.querySelectorAll('.gup-option__checkbox');
     const certificateCanvas     = document.getElementById('certificateCanvas');
-    const certificateBackground = document.getElementById('certificateBackground');
-    const imgBorder             = document.getElementById('imgBorder');
     const textGup               = document.getElementById('textGup');
     
     //Función que permite que sólo un checkbox pueda estar activo
