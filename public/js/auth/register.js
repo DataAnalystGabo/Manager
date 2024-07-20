@@ -1,6 +1,7 @@
 import { calculateAge } from '../helpers/calculateAge.js';
 import { showAlert } from '../helpers/showAlert.js';
 import { inputs, resetInputStyle, validateForm } from '../helpers/validatorInputs.js';
+import { buttonSubmit } from '../components/buttonSubmit.js';
 
 const inputBirthdate  = document.getElementById('birthdate');
 const labelAge        = document.getElementById('ageLabel');
@@ -15,7 +16,6 @@ inputBirthdate.addEventListener('change', function() {
 //Capturamos los datos enviados por el usuario
 form.addEventListener('submit', function(e){
     e.preventDefault();
-
     if (validateForm()) {
         const firstName  = e.target.firstName.value;
         const lastName   = e.target.lastName.value;
@@ -24,8 +24,8 @@ form.addEventListener('submit', function(e){
         const email      = e.target.email.value;
         const password   = e.target.password.value;
         const rePassword = e.target.rePassword.value;
-
         if(password === rePassword){
+            buttonSubmit('Procesando', 'loading');
             //Enviando datos al servidor
             fetch('http://localhost:3000/api/auth/register', {
                 method: 'POST',
@@ -38,22 +38,28 @@ form.addEventListener('submit', function(e){
             .then(data => {
                 if (data.success) {
                     showAlert(data.message, 'success');
+                    buttonSubmit('', 'success');
+
                     //Reset del form
                     form.reset();
                     inputs.forEach(input => {
                     resetInputStyle(input.element, input.label);
                     });
+                    
                     //Redirigiedo al usuario
                     setTimeout(() => {
                         window.location.href = 'login.html';
-                    }, 3000);
+                    }, 5000);
                 } else {
                     showAlert(data.message, 'error');
+                    buttonSubmit('Registrarme', 'enabled');
                 }
             })
             .catch(error => {
                 //Alerta: Error de servidor
                 showAlert(error, 'error');
+                console.log('esta aqui');
+                buttonSubmit('', 'error');
             });
         }else{
             //Alerta: Error las contraseñas no coinciden

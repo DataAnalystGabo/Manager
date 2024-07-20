@@ -1,0 +1,14 @@
+:root {
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-tertiary: #adb5bd;
+    --color-active: #9d4edd;
+    --button: #7b2cbf;
+    --background: #ffff;
+    --alert-ok: #d4edda;
+    --alert-border-ok: #c3e6cb;
+    --alert-color-ok: #155724;
+    --alert-error: #f8d7da;
+    --alert-border-error: #f5c6cb;
+    --alert-color-error: #721c24;
+}

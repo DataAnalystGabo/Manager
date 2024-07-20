@@ -1,4 +1,5 @@
-import { showAlert } from "../helpers/showAlert.js";
+import { showAlert } from '../helpers/showAlert.js';
+import { buttonSubmit } from '../components/buttonSubmit.js';
 
 const form = document.getElementById('form');
 
@@ -8,7 +9,8 @@ form.addEventListener('submit', function(e) {
     const email    = e.target.email.value;
     const password = e.target.password.value;
     if (email && password) {
-        
+        buttonSubmit('Procesando', 'loading');
+        //Enviando datos al servidor
         fetch('http://localhost:3000/api/auth/login', {
             method: 'POST',
             headers: {
@@ -22,12 +24,13 @@ form.addEventListener('submit', function(e) {
                 window.location.href = 'certificateBuilder.html'; // Redirige al dashaboard
             } else {
                 showAlert(data.message, 'error');
+                buttonSubmit('Ingresar', 'enabled');
             }
         })
         .catch(error => {
             showAlert(error, 'error');
+            buttonSubmit('Ingresar', 'enabled');
         });
-
     } else {
         showAlert('¡Debes ingresar un email y una contraseña!', 'error');
     }

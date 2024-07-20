@@ -1,0 +1,151 @@
+@import url("../base/root.css");
+
+.button {
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+    border-radius: 1.6em;
+    border: 1px solid var(--color-active);
+    background-color: var(--button);
+    cursor: pointer;
+    color: var(--background);
+    margin-bottom: 2.5em;
+    transition: 0.5s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--color-active);
+}
+
+.button__disabled {
+    background-color: var(--text-secondary);
+    border: var(--text-secondary) em;
+    pointer-events: none;
+    cursor: auto;
+}
+
+.button__disabled:hover {
+    background-color: var(--text-secondary);
+}
+
+.button__error {
+    /* Aqui va los estilo del button redondo para el erorr */
+    width: 3em;
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--alert-error);
+    border: 1px solid var(--alert-border-error);
+    color: var(--alert-color);
+    pointer-events: none;
+}
+
+.button__success {
+    width: 3em;
+    max-width: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--alert-ok);
+    border: var(--alert-border-ok);
+    color: var(--alert-color-ok);
+    pointer-events: none;
+}
+
+.button__label--hidden {
+    display: none;
+}
+
+.button__loading {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__loading--active {
+    display: flex;
+}
+
+.button__dot {
+    width: 0.45em;
+    height: 0.45em;
+    margin: 0 0.2em;
+    border-radius: 100%;
+    background-color: var(--background);
+    --webkit-animation: bounce 1s infinite alternate;
+    --moz-animation: bounce 1s infinite alternate;
+    --o-animation: bounce 1s infinite alternate;
+    animation: bounce 1s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+    to {
+        opacity: 0.2;
+        transform: translateY(-0.4em);
+    }
+}
+
+@-moz-keyframes bounce {
+    to {
+        opacity: 0.2;
+        transform: translateY(-0.4em);
+    }
+}
+
+@-o-keyframes bounce {
+    to {
+        opacity: 0.2;
+        transform: translateY(-0.4em);
+    }
+}
+
+@keyframes bounce {
+    to {
+        opacity: 0.2;
+        transform: translateY(-0.4em);
+    }
+}
+
+.button__dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.button__dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.button__skull {
+    font-size: 0;
+    color: var(--alert-color-error);
+}
+
+.button__skull--visible {
+    font-size: 1.2em;
+    animation: rotation 1s ease-in-out;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.button__heart {
+    font-size: 0;
+    color: var(--alert-color-ok);
+}
+
+.button__heart--active {
+    font-size: 1.2em;
+    animation: rotation 1s ease-in-out;
+}
