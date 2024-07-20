@@ -11,7 +11,10 @@ form.addEventListener('submit', function(e) {
     if (email && password) {
         buttonSubmit('Procesando', 'loading');
         //Enviando datos al servidor
-        fetch('http://localhost:3000/api/auth/login', {
+        fetch(window.location.hostname === '127.0.0.1'
+            ? 'http://localhost:3000/api/auth/register'
+            : 'https://manager-8h85.onrender.com/api/auth/register', 
+            {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

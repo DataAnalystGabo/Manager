@@ -13,6 +13,10 @@ inputBirthdate.addEventListener('change', function() {
     labelAge.innerText = `${age} años`;
 });
 
+
+//--DEBUG en produ
+console.log(window.location.hostname);
+
 //Capturamos los datos enviados por el usuario
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -27,7 +31,11 @@ form.addEventListener('submit', function(e){
         if(password === rePassword){
             buttonSubmit('Procesando', 'loading');
             //Enviando datos al servidor
-            fetch('http://localhost:3000/api/auth/register', {
+            fetch(
+                window.location.hostname === '127.0.0.1'
+                ? 'http://localhost:3000/api/auth/register'
+                : 'https://manager-8h85.onrender.com/api/auth/register', 
+                {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
