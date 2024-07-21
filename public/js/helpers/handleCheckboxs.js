@@ -1,8 +1,8 @@
 export function handleCheckboxs() {
-    const checkboxes            = document.querySelectorAll('.gup-option__checkbox');
-    const certificateCanvas     = document.getElementById('certificateCanvas');
-    const textGup               = document.getElementById('textGup');
-    
+    let checkboxes  = document.querySelectorAll('.gup-option__checkbox');
+    let textGup     = document.getElementById('textGup');
+    let imgWatermak = document.getElementById('imgWatermak');
+    let imgBorder   = document.getElementById('imgBorder'); 
     //Función que permite que sólo un checkbox pueda estar activo
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener('change', () => {
@@ -12,10 +12,9 @@ export function handleCheckboxs() {
                         otherCheckboxs.checked = false;
                     }
                 })
-                let color         = checkbox.name;
-                // certificateBackground.src = `/public/img/background-${color}.svg`;
-                // imgBorder.src     = `/public/img/border-${color}.svg`;
-                certificateCanvas.style.backgroundImage = `url("../img/background-${color}.svg")`;
+                let color = checkbox.name;
+                imgWatermak.src = `../img/watermark-${color}.svg`;
+                imgBorder.src   = `../img/border-${color}.svg`;
                 if (color === 'yellow') {
                     textGup.textContent = '8° gup - cinturón amarillo.';
                 }
@@ -29,8 +28,8 @@ export function handleCheckboxs() {
                     textGup.textContent = '2° gup - cinturón rojo.';
                 }
             } else {
-                certificateCanvas.style.backgroundImage = 'url("")';
-                //certificateBackground.src = '';
+                imgWatermak.src = '../img/watermark-grey.svg';
+                imgBorder.src   = '../img/border-grey.svg';
             }
         });
     });

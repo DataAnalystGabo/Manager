@@ -1,49 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Italianno&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Italianno&display=swap");
 @import url("../base/root.css");
+@import url("../components/button.css");
 
 /* Estilos generales para el body */
 .body {
-  max-width: 100vw;
-  display: flex;
-  flex-direction: column;
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
 }
 
 /* Estilos para el contenedor principal */
 .certificate-builder {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilos para el contenedor del formulario */
 .certificate-builder__form {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 3em 1em;
-  order: 2;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 3em 1em;
+    order: 2;
 }
 
 /* Estilos para el encabezado del formulario */
 .certificate-builder__header {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-bottom: 1px solid var(--text-secondary);
-  padding-bottom: 1.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid var(--text-secondary);
+    padding-bottom: 1.5em;
 }
 
 /* Estilos para el título del formulario */
 .certificate-builder__title {
-  color: var(--text-primary);
-  font-size: 2em;
-  font-weight: 300;
-  padding: 0;
-  margin: 0;
+    color: var(--text-primary);
+    font-size: 2em;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
 }
 
 /* Estilos para el contenedor de GUP */
@@ -51,124 +52,126 @@
 .certificate-builder__name-section,
 .certificate-builder__date-section,
 .certificate-builder__signature-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5em 0;
-  border-bottom: 1px solid var(--text-tertiary);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 0;
+    border-bottom: 1px solid var(--text-tertiary);
 }
 
 .certificate-builder__signature-section {
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 /* Estilos para los contenedores de los campos de nombre */
 .certificate-builder__date-wrapper,
 .certificate-builder__signature-wrapper {
-  width: 100%;
+    width: 100%;
 }
 
 /* Estilos para el encabezado de gup, nombre, apellido*/
-.certificate-builder__gup-label, 
+.certificate-builder__gup-label,
 .certificate-builder__name-label,
 .certificate-builder__date-label,
 .certificate-builder__signature-label {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 1em;
-  color: var(--text-secondary);
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1em;
+    color: var(--text-secondary);
 }
 
 /* Estilos para las opciones de GUP */
 .certificate-builder__gup-options {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: 0.9em;
-  gap: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+    gap: 1em;
 }
 
 /* Estilos para las etiquetas de las opciones */
 .gup-option {
-  color: var(--text-secondary);
-  cursor: pointer;
+    color: var(--text-secondary);
+    cursor: pointer;
 }
 
 /* Estilos para los checkboxes de las opciones (ocultos) */
 .gup-option__checkbox {
-  display: none;
+    display: none;
 }
 
 /* Estilos base para los spans de las opciones */
 .gup-option__label {
-  position: relative;
-  display: inline-block;
-  padding: 0.4em 2.5em;
-  border-radius: 3em;
-  border: 2px solid var(--text-tertiary);
-  transition: 0.2s ease-in-out;
-  user-select: none;
-  overflow: hidden;
+    position: relative;
+    display: inline-block;
+    padding: 0.4em 2.5em;
+    border-radius: 3em;
+    border: 2px solid var(--text-tertiary);
+    transition: 0.2s ease-in-out;
+    user-select: none;
+    overflow: hidden;
 }
 
 /* Estilos para los spans de las opciones cuando el checkbox está marcado */
 .gup-option--yellow input[type="checkbox"]:checked ~ .gup-option__label {
-  color: #faa307;
-  border: 2px solid #fdb833;
-  background-color: #fffae598;
+    color: #faa307;
+    border: 2px solid #fdb833;
+    background-color: #fffae598;
 }
 .gup-option--green input[type="checkbox"]:checked ~ .gup-option__label {
-  color: #14746f;
-  border: 2px solid #14746f;
-  background-color: #99e2b498;
+    color: #14746f;
+    border: 2px solid #14746f;
+    background-color: #99e2b498;
 }
 .gup-option--blue input[type="checkbox"]:checked ~ .gup-option__label {
-  color: #1565c0;
-  border: 2px solid #1565c0;
-  background-color: #bbdefb98;
+    color: #1565c0;
+    border: 2px solid #1565c0;
+    background-color: #bbdefb98;
 }
 .gup-option--red input[type="checkbox"]:checked ~ .gup-option__label {
-  color: #c23350;
-  border: 2px solid #c23350;
-  background-color: #f9c5d198;
+    color: #c23350;
+    border: 2px solid #c23350;
+    background-color: #f9c5d198;
 }
 
 /*Estilos para el input nombre*/
 .certificate-builder__name-input,
 .certificate-builder__date-input,
 .certificate-builder__signature-input {
-  width: 100%;
-  height: 3em;
-  padding: 0 1em;
-  outline: none;
-  border-radius: 1.6em;
-  background: transparent;
-  color: var(--text-secondary);
-  border: 2px solid var(--text-tertiary);
-  box-sizing: border-box;
+    width: 100%;
+    height: 3em;
+    padding: 0 1em;
+    outline: none;
+    border-radius: 1.6em;
+    background: transparent;
+    color: var(--text-secondary);
+    border: 2px solid var(--text-tertiary);
+    box-sizing: border-box;
 }
 
-.certificate-builder__date-input{
-  cursor: pointer;
+.certificate-builder__date-input {
+    cursor: pointer;
 }
-
 
 /* Estilos para el contenedor del certificado */
 .certificate-builder__certificate {
-  /* Renombrado */
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  order: 1;
-  background-color: var(--text-primary);
+    /* Renombrado */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    background-color: var(--text-primary);
 }
 
-
+/*Estilos personalizados para el componente boton*/
+.certificate-builder__button-submit {
+    margin-top: 1em;
+}
 /*
 
 La implementación de la marca de agua como background y el border que varían según
@@ -181,172 +184,183 @@ como PDF la marca de agua queda por encima de los demás elementos pero en alta 
 queda ordenado correctamente con una resolución correcta al 100% pero a medida que se aumenta el zoom se pixelea.
 
 */
-.certificate__canvas{
-  width: 595px;
-  height: 842px;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url('');
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: auto;
-  image-rendering: pixelated;
-  margin: 0;
-  padding: 0;
-  background-color: #FFFF;
-}
-
-/* .certificate__background {
-  position: absolute;
-  left: 0;
+/* .certificate__canvas {
+    width: 595px;
+    height: 842px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto;
+    image-rendering: pixelated;
+    margin: 0;
+    padding: 0;
+    background-color: #ffff;
 } */
 
-.certificate__header{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.certificate__canvas {
+    width: 595px;
+    height: 842px;
+    display: grid;
+    grid-template-areas: "canva";
+    overflow: hidden;
+    background-color: #ffff;
 }
 
-.certificate__logo-academy{
-  width: 8em;
-  height: 8em;
-  margin-bottom: 1em;
+.certificate__watermark {
+    width: 90%;
+    height: 90%;
+    margin-bottom: 3em;
+    margin-left: -5em;
+    grid-area: canva;
 }
 
-.certificate__title{
-  font-size: 4em;
-  font-family: "Italianno";
-  font-weight: 400;
-  font-style: normal;
-  color: var(--text-primary);
-  margin: 0;
+.certificate__border {
+    margin: 1.2em auto;
+    grid-area: canva;
 }
 
-.certificate__subtitle{
-  margin-top: -1em;
-  color: var(--text-secondary);
-  font-weight: 600;
-  letter-spacing: .25em;
+.certificate__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    margin-top: -38em;
+    grid-area: canva;
 }
 
-.certificate__body{
-  max-width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: 800;
-  font-size: 1.5em;
-  text-align: center;
-  color: var(--text-secondary);
-  gap: .5em;
-  padding: 1.5em 0;
+.certificate__logo-academy {
+    width: 8em;
+    height: 8em;
+    margin-bottom: 1em;
 }
 
-.certificate__text{
-  margin: 0;
-  padding: 0;
+.certificate__title {
+    font-size: 4em;
+    font-family: "Italianno";
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-primary);
+    margin: 0;
 }
 
-.certificate__name{
-  color: var(--text-primary);
-  font-size: 1.5em;
+.certificate__subtitle {
+    margin-top: -1em;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.25em;
 }
 
-.certificate__signatures{
-  width: 75%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 2em 0;
+.certificate__body {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--text-secondary);
+    gap: 0.5em;
+    padding: 1.5em 0;
+    margin-top: -5.6em;
+    grid-area: canva;
 }
 
-.certificate__examinator, 
+.certificate__text {
+    margin: 0;
+    padding: 0;
+}
+
+.certificate__name {
+    color: var(--text-primary);
+    font-size: 1.5em;
+}
+
+.certificate__signatures {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-self: center;
+    align-self: center;
+    padding: 2em 0;
+    grid-area: canva;
+    margin-bottom: -13.7em;
+}
+
+.certificate__examinator,
 .certificate__instructor {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: var(--text-secondary);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--text-secondary);
 }
 
 .certificate__examinator-name,
 .certificate__instructor-name {
-  height: 1.15em;
+    height: 1.15em;
 }
 
-.certificate__line{
-  height: .09em;
-  width: 100%;
-  display: block;
-  margin: .5em 0;
-  background-color: var(--text-secondary);
+.certificate__line {
+    height: 0.09em;
+    width: 100%;
+    display: block;
+    margin: 0.5em 0;
+    background-color: var(--text-secondary);
 }
 
-.certificate__logos{
-  width: 75%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em 0;
-}
-
-.certificate-builder__generator {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5em 0;
-}
-
-.certificate-builder__button {
-  width: 10em;
-  max-width: 30em;
-  height: 3em;
-  border-radius: 1.6em;
-  border: 1px solid var(--color-active);
-  background: var(--button);
-  cursor: pointer;
-  color: var(--background);
-  transition: 0.5s ease;
-}
-
-.certificate-builder__button:hover {
-  background-color: var(--color-active);
+.certificate__logos {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    padding: 1em 0;
+    margin-bottom: -29em;
+    grid-area: canva;
 }
 
 /* Media query para pantallas grandes */
 @media (min-width: 768px) {
-  .certificate-builder {
-    flex-direction: row;
-  }
+    .certificate-builder {
+        flex-direction: row;
+    }
 
-  .certificate-builder__form {
-    width: 30%;
-    order: 1;
-  }
+    .certificate-builder__form {
+        width: 30%;
+        order: 1;
+    }
 
-  .certificate-builder__certificate {
-    width: 70%;
-    order: 2;
-  }
+    .certificate-builder__certificate {
+        width: 70%;
+        order: 2;
+    }
 
-  .certificate-builder__signature-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
+    .certificate-builder__signature-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
 
-  .certificate-builder__signature-wrapper {
-    min-width: 13em;
-    flex: 1;
-  }
+    .certificate-builder__signature-wrapper {
+        min-width: 13em;
+        flex: 1;
+    }
 
-  .certificate-builder__signature-input {
-    max-width: 25em;
-  }
+    .certificate-builder__signature-input {
+        max-width: 25em;
+    }
 }

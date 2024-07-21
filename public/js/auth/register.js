@@ -29,7 +29,7 @@ form.addEventListener('submit', function(e){
         const password   = e.target.password.value;
         const rePassword = e.target.rePassword.value;
         if(password === rePassword){
-            buttonSubmit('Procesando', 'loading');
+            buttonSubmit('Procesando', '', 'loading');
             //Enviando datos al servidor
             fetch(
                 window.location.hostname === '127.0.0.1'
@@ -46,7 +46,7 @@ form.addEventListener('submit', function(e){
             .then(data => {
                 if (data.success) {
                     showAlert(data.message, 'success');
-                    buttonSubmit('', 'success');
+                    buttonSubmit('', 'Registrarme', 'success');
 
                     //Reset del form
                     form.reset();
@@ -60,13 +60,13 @@ form.addEventListener('submit', function(e){
                     }, 5000);
                 } else {
                     showAlert(data.message, 'error');
-                    buttonSubmit('Registrarme', 'enabled');
+                    buttonSubmit('', 'Registrarme', 'enabled');
                 }
             })
             .catch(error => {
                 //Alerta: Error de servidor
                 showAlert(error, 'error');
-                buttonSubmit('', 'error');
+                buttonSubmit('', 'Registrarme', 'error');
             });
         }else{
             //Alerta: Error las contraseñas no coinciden

@@ -9,7 +9,7 @@ form.addEventListener('submit', function(e) {
     const email    = e.target.email.value;
     const password = e.target.password.value;
     if (email && password) {
-        buttonSubmit('Procesando', 'loading');
+        buttonSubmit('Procesando', '', 'loading');
         //Enviando datos al servidor
         fetch(window.location.hostname === '127.0.0.1'
             ? 'http://localhost:3000/api/auth/login'
@@ -27,12 +27,12 @@ form.addEventListener('submit', function(e) {
                 window.location.href = 'certificateBuilder.html'; // Redirige al dashaboard
             } else {
                 showAlert(data.message, 'error');
-                buttonSubmit('Ingresar', 'enabled');
+                buttonSubmit('', 'Ingresar', 'error');
             }
         })
         .catch(error => {
             showAlert(error, 'error');
-            buttonSubmit('Ingresar', 'enabled');
+            buttonSubmit('', 'Ingresar', 'error');
         });
     } else {
         showAlert('¡Debes ingresar un email y una contraseña!', 'error');

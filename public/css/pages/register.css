@@ -10,7 +10,7 @@
 }
 
 .main {
-    min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,18 +19,18 @@
 }
 
 .wrapper {
-    height: max-content;
-    width: 50vw;
     align-items: center;
     justify-content: center;
+    margin: 4em 0;
 }
 
 .form {
     width: 100%;
+    max-width: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-self: center;
 }
 
 .form__header {
@@ -92,7 +92,7 @@
 .form__lastname,
 .form__birthdate,
 .form__age {
-    width: 80vw;
+    width: 100%;
     max-width: 30em;
     display: flex;
     flex-direction: column;
@@ -163,18 +163,14 @@ input:not(:placeholder-shown) + .form__label {
     background: var(--background);
 }
 
-.form__button {
-    width: 80vw;
-    max-width: 30em;
-}
-
 .form__alert {
-    width: 80vw;
+    width: 100%;
     max-width: 30em;
     display: none;
     justify-content: start;
     align-items: center;
     border-radius: 0.25em;
+    margin-top: 1.5em;
 }
 
 .form__span {
