@@ -231,7 +231,7 @@ queda ordenado correctamente con una resolución correcta al 100% pero a medida 
     justify-self: center;
     align-self: center;
     align-items: center;
-    margin-top: -38em;
+    margin-top: -35em;
     grid-area: canva;
 }
 
@@ -294,7 +294,7 @@ queda ordenado correctamente con una resolución correcta al 100% pero a medida 
     align-self: center;
     padding: 2em 0;
     grid-area: canva;
-    margin-bottom: -13.7em;
+    margin-bottom: -15em;
 }
 
 .certificate__examinator,
@@ -328,7 +328,7 @@ queda ordenado correctamente con una resolución correcta al 100% pero a medida 
     justify-self: center;
     align-self: center;
     padding: 1em 0;
-    margin-bottom: -29em;
+    margin-bottom: -31em;
     grid-area: canva;
 }
 
